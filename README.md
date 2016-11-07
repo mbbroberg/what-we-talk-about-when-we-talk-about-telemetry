@@ -7,27 +7,30 @@ DEFINITION TBD
 **My working definition:** Telemetry captures data from multiple sources, aggregates it, and publishes it in a consumable format. What happens after you collect and publish the information is beyond the scope of telemetry.
 
 
-Sensors -> Telemetry -> Persistence -> Learning -> Visualization -> Notification -> Alerting 
+Sensors -> Telemetry -> Persistence -> Learning -> Visualization -> Notification -> Alerting
 
 
 
 ## Comparison
-Telemetry frameworks are often conflated with entire monitoring solutions. I've been reading up and hope to clarity the differences. 
+Telemetry frameworks are often conflated with entire monitoring solutions. I've been reading up and hope to clarity the differences.
 
-| Tools                                            | Status     | Default Resolution | Model | ? | written in | language specific |
-|:-----------------------------------------------------|:-----------|:-------------------|:------|:--|:-----------|:------------------|
-| [Snap](https://github.com/intelsdi-x/snap)           | 1 second   | 1 second           | push  |   | Go         | N                 |
-| [collectd](https://github.com/collectd/collectd)     | 10 seconds | 10 seconds         | push  |   | C          |                   |
-| [Bosun](https://github.com/bosun-monitor/bosun)      |            |                    | push  |   |            |                   |
-| [diamond](https://github.com/python-diamond/Diamond) |            |                    |       |   | Python     | Y                 |
-| [telegraf](https://github.com/influxdata/telegraf)   |            |                    |       |   | Go         |                   |
-| [metricsd](https://github.com/josegonzalez/metricsd) |            |                    |       |   | Go         |                   |
-| [statsd](https://github.com/etsy/statsd)             |            |                    |       |   | JavaScript |                   |
+| Tools                                                 | Status                | Default Resolution | Model | ? | written in | language specific |
+|:------------------------------------------------------|:----------------------|:-------------------|:------|:--|:-----------|:------------------|
+| [Snap](https://github.com/intelsdi-x/snap)            | Beta ([0.17.0][snap]) | 1 second           | push  |   | Go         | N                 |
+| [collectd](https://github.com/collectd/collectd)      | 10 seconds            | 10 seconds         | push  |   | C          |                   |
+| [Bosun](https://github.com/bosun-monitor/bosun)       |                       |                    | push  |   |            |                   |
+| [diamond](https://github.com/python-diamond/Diamond)  |                       |                    |       |   | Python     | Y                 |
+| [telegraf](https://github.com/influxdata/telegraf)    |                       |                    |       |   | Go         |                   |
+| [metricsd](https://github.com/josegonzalez/metricsd)  |                       |                    |       |   | Go         |                   |
+| [statsd](https://github.com/etsy/statsd)              |                       |                    |       |   | JavaScript |                   |
+| [Ceilometer](https://github.com/openstack/ceilometer) |                       |                    |       |   |            |                   |
 
-Include: 
+[snap]: https://github.com/intelsdi-x/snap
+
+Include:
  * Metric Identity (Source)
  * Metric Values (Counters, Gauges, Percntiles, Nominal, Ordinal, Interval, Ratio)
- * Timestamps 
+ * Timestamps
  * Custom Resolution (6s, 6m)
  * Latency (after reading, how long before we can act on them?)
  * Spooling (persist dropping of metrics when endpoint is unavailable)
@@ -43,7 +46,7 @@ Storage: none
 Configuration:
  runtime shortcuts
 
-Nagios 
+Nagios
 
 Sensing:
 Subprocesses and plugins, LOTS of plugins
@@ -57,7 +60,7 @@ Visualization:
 Basic graphs of check results
 Dependency chains
 
-Ganglia 
+Ganglia
 
 Sensing:
 gmond on nodes
@@ -72,7 +75,7 @@ Alerting: N/A
 Visualization: ganglia-web
 
 
-Sensu 
+Sensu
 
 Sensing: Arbitrary JSON emitters “Checkers”
 Collection: RabbitMQ JSON event bus
@@ -84,7 +87,7 @@ Handlers
 Visualization: N/A
 
 
-ELK 
+ELK
 
 Sensing:
 Deployable log thrower
@@ -98,7 +101,7 @@ Alerting: N/A
 Visualization:
 Kibana (ES)
 
-OpenTSDB 
+OpenTSDB
 
 Sensing:
 Custom clients
@@ -111,7 +114,7 @@ Complete storage layer
 Alerting: N/A
 Visualization: N/A
 
-Graphite 
+Graphite
 
 Sensing:
 DIY, name+value
@@ -125,20 +128,20 @@ Visualization:
 Static config of complex graphs
 
 
-## "The Stacks" 
+## "The Stacks"
 
 There are a few maturing visions of a complete solution that goes from Telemetry all the way to Alerting.  
 
-| Stack Name | Sensors | Logging | Telemetry | Persistence | Querying | Visualization | Notification | Alerting | 
-|------|------|------|------|------|------|------|----|
-| Raintank | :x: | Snap | Graphite | Grafana | Grafana | Grafana | Grafana | 
-| ELK | Logstash | Beats | Elasticsearch | ES | Kabana | |
-| Prometheus | 
-| Zabbix | 
-| Netflix |
-| VMware | 
+| Stack Name | Sensors  | Logging | Telemetry     | Persistence | Querying | Visualization | Notification | Alerting |
+|:-----------|:---------|:--------|:--------------|:------------|:---------|:--------------|:------------------------|
+| Raintank   | :x:      | Snap    | Graphite      | Grafana     | Grafana  | Grafana       | Grafana                 |
+| ELK        | Logstash | Beats   | Elasticsearch | ES          | Kabana   |               |                         |
+| Prometheus |          |         |               |             |          |               |                         |
+| Zabbix     |          |         |               |             |          |               |                         |
+| Netflix    |          |         |               |             |          |               |                         |
+| VMware     |          |         |               |             |          |               |                         |
 
-Open Source? 
+Open Source?
 Enterprise Support?
 
 
