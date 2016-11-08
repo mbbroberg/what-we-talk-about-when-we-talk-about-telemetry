@@ -5,6 +5,7 @@
 [scollector]: http://bosun.org/scollector/
 [bosun_rel]: https://github.com/bosun-monitor/bosun/releases
 [tcollector]: https://github.com/OpenTSDB/tcollector
+[tcollector_rel]: https://github.com/OpenTSDB/tcollector/releases
 [diamond]: https://github.com/python-diamond/Diamond
 [diamond_rel]: https://github.com/python-diamond/Diamond/releases
 [telegraf]: https://github.com/influxdata/telegraf
@@ -39,7 +40,7 @@ Telemetry frameworks are often conflated with entire monitoring solutions. I wou
 | [Ceilometer][ceilometer]            | Released ([7.0.0][ceil_rel])     | 10 minutes       | pull             | Python     | No                                          |
 
 
-TODO >> everything below here. 
+TODO >> everything below here.
 
 ### Details
 | Collect from multiple sources? | Able to Process data? | Publish to multiple sources? | Custom Resolution? | Timestamps? | Metric Identity? | Notifications? |
