@@ -29,15 +29,15 @@ Telemetry frameworks are often conflated with entire monitoring solutions. I wou
 ### Overview
 | Tools                               | Release Status                   | Default Interval | Collection Model | Written In | Client Libraries                            |
 |:------------------------------------|:---------------------------------|:-----------------|:-----------------|:-----------|:--------------------------------------------|
-| [Snap][snap]                        | Beta ([0.17.0][snap_rel])        | 1 second         | pull             | Go         | C++, Python                                 |
-| [collectd][collectd]                | Released ([5.5][collectd_rel])   | 10 seconds       | pull             | C          | No                                          |
-| Bosun's [scollector][scollector]    | Beta ([0.5.0][bosun_rel])        | 1 second         | pull             | Go         | No                                          |
-| OpenTSDB's [tcollector][tcollector] | Released ([1.3][tcollector_rel]) | 15 seconds       | pull             | Python     | No                                          |
-| [diamond][diamond]                  | Released ([4.0][diamond_rel])    | 300 seconds      | pull             | Python     | No                                          |
-| [telegraf][telegraf]                | Released ([1.0][telegraf_rel]    | 10 seconds       | pull             | Go         | No                                          |
-| [metricsd][metricsd]                | None                             | 30 seconds       | pull             | Go         | No                                          |
-| [statsd][statsd]                    | Beta ([0.8.0][statsd_rel])       | N/A              | push             | JavaScript | [Many](https://github.com/etsy/statsd/wiki) |
-| [Ceilometer][ceilometer]            | Released ([7.0.0][ceil_rel])     | 10 minutes       | pull             | Python     | No                                          |
+| [Snap][snap]                        | Beta ([0.17.0][snap_rel])        | 1 second         | Pull             | Go         | C++, Python                                 |
+| [collectd][collectd]                | Released ([5.5][collectd_rel])   | 10 seconds       | Pull             | C          | No                                          |
+| Bosun's [scollector][scollector]    | Beta ([0.5.0][bosun_rel])        | 1 second         | Pull             | Go         | No                                          |
+| OpenTSDB's [tcollector][tcollector] | Released ([1.3][tcollector_rel]) | 15 seconds       | Pull             | Python     | No                                          |
+| [diamond][diamond]                  | Released ([4.0][diamond_rel])    | 300 seconds      | Pull             | Python     | No                                          |
+| [telegraf][telegraf]                | Released ([1.0][telegraf_rel]    | 10 seconds       | Pull             | Go         | No                                          |
+| [metricsd][metricsd]                | None                             | 30 seconds       | Pull             | Go         | No                                          |
+| [statsd][statsd]                    | Beta ([0.8.0][statsd_rel])       | N/A              | Push             | JavaScript | [Many](https://github.com/etsy/statsd/wiki) |
+| [Ceilometer][ceilometer]            | Released ([7.0.0][ceil_rel])     | 10 minutes       | Pull             | Python     | No                                          |
 
 
 TODO >> everything below here.
